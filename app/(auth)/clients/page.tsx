@@ -34,8 +34,6 @@ export default function ClientsPage() {
     const [deletingCredits, setDeletingCredits] = useState<string | null>(null)
 
 
-
-
     const filteredCashFlow = useMemo(() => {
         let filtered = cashFlow
 
@@ -122,8 +120,6 @@ export default function ClientsPage() {
     }, [fetchData])
 
 
-    // clients edit
-
     const clientClick = (item: ClienteData) => {
         setEditingClients({ ...item });
     };
@@ -198,7 +194,7 @@ export default function ClientsPage() {
         }
     };
 
-    // credits edit
+    
 
     const creditsClick = (item: CreditData) => {
         setEditingCredits({ ...item })
@@ -329,7 +325,6 @@ export default function ClientsPage() {
         <div className="h-screen overflow-hidden bg-linear-to-br  flex flex-col space-y-1 ">
             <Header onSearch={setSearchTerm} onPeriod={setSelectedPeriod} bellClients={clients} bellCredit={credits} />
             <main className="p-2 min-h-screen bg-white   backdrop-blur-xl ">
-
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 ">
 
                     <div className="lg:col-span-4">

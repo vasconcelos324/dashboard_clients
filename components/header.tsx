@@ -398,8 +398,8 @@ export default function Header({ onSearch, onPeriod, bellCredit, bellClients, be
                         <DropdownMenuContent className="w-64 bg-linear-to-br from-blue-950/95 to-blue-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl" align="end">
                             <DropdownMenuLabel className="font-normal">
                                 <div className="flex flex-col space-y-2 p-2">
-                                    <p className="text-sm font-bold text-white">Usuário Admin</p>
-                                    <p className="text-xs text-white/60">admin@vasconcellos.com</p>
+                                    <p className="text-sm font-bold text-white">Adm</p>
+                                    <p className="text-xs text-white/60">adm@adm.com</p>
                                 </div>
                             </DropdownMenuLabel>
                             <DropdownMenuSeparator className="bg-white/20" />
