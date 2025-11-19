@@ -3,7 +3,7 @@
 
 
 import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Header from '@/components/header';
@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button';
 import { format, parseISO } from 'date-fns';
 import { toast } from 'sonner';
 import { Toaster } from '@/components/ui/sonner';
-import { formatCurrency,  handleCurrencyInput,  maskedToNumber } from '@/utils';
+import { formatCurrency, handleCurrencyInput, maskedToNumber } from '@/utils';
 
 
 
@@ -56,8 +56,15 @@ export default function RegisterCredit() {
 
   const valorInicial = maskedToNumber(valorInicialMask);
   const valorParcelas = maskedToNumber(valorParcelasMask);
-  const qntParcelas = Number(form.watch('qntParcelas')) || 0;
-  const dataInicio = form.watch('dataInicio');
+  /* const qntParcelas = Number(form.watch('qntParcelas')) || 0; */
+  const qntParcelas = Number(useWatch({
+    control: form.control,
+    name: 'qntParcelas'
+  })) || 0;
+  const dataInicio = useWatch({
+    control: form.control,
+    name: 'dataInicio'
+  });
 
   const valorTotal = valorParcelas * qntParcelas;
   const valorJuros = valorTotal - valorInicial;
