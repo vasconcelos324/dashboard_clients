@@ -1,10 +1,15 @@
-"use client" 
+/* "use client" */
 
 import Header from "@/components/header"
+
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+
+
+
 import { fetchDataServer } from "@/server"
 import { calculateDateEnd, calculateDateEndLong, CashFlowData, ClienteData, CreditData, formatCurrency, formatPhone, isDateInPeriod } from "@/utils"
 import { Check, Loader2, PackageOpen, Pencil, Trash2, Users, X } from "lucide-react"
@@ -194,7 +199,7 @@ export default function ClientsPage() {
         }
     };
 
-
+    
 
     const creditsClick = (item: CreditData) => {
         setEditingCredits({ ...item })
