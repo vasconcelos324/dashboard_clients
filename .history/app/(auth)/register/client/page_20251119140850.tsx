@@ -121,7 +121,7 @@ export default function RegisterClients() {
                             className="flex-1"
                         >
                             <Image
-                                src="/credit.webp"          
+                                src="/credits.webp"          
                                 alt="Nossos clientes"
                                 fill
                                 className="object-cover"

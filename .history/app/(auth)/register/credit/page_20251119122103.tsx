@@ -56,6 +56,7 @@ export default function RegisterCredit() {
 
   const valorInicial = maskedToNumber(valorInicialMask);
   const valorParcelas = maskedToNumber(valorParcelasMask);
+  /* const qntParcelas = Number(form.watch('qntParcelas')) || 0; */
   const qntParcelas = Number(useWatch({
     control: form.control,
     name: 'qntParcelas'

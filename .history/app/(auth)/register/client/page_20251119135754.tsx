@@ -13,7 +13,7 @@ import * as z from 'zod';
 import { format, parseISO } from 'date-fns';
 import { Calendar, DollarSign, Phone, User, ShoppingBag, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { toast } from 'sonner';
+import {  toast } from 'sonner';
 import Header from '@/components/header';
 import Image from 'next/image';
 import { formatCurrencyRegister, toNumber } from '@/utils';
@@ -121,8 +121,8 @@ export default function RegisterClients() {
                             className="flex-1"
                         >
                             <Image
-                                src="/credit.webp"          
-                                alt="Nossos clientes"
+                                src="public/clients.jpg"
+                                alt="regsiter/client"
                                 fill
                                 className="object-cover"
                                 priority

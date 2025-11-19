@@ -142,7 +142,7 @@ export default function RegisterCredit() {
               className="flex-1"
             >
               <Image
-                src="/credit.webp"
+                src="/clients.webp"
                 alt="register/credit"
                 fill
                 className="object-cover"

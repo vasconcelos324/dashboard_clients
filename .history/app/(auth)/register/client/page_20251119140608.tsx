@@ -120,13 +120,13 @@ export default function RegisterClients() {
                             transition={{ duration: 0.5 }}
                             className="flex-1"
                         >
-                            <Image
-                                src="/credit.webp"          
-                                alt="Nossos clientes"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
+              <Image
+                src="/credit.webp"
+                alt="register/credit"
+                fill
+                className="object-cover"
+                priority
+              />
                         </motion.div>
                     </div>
 
