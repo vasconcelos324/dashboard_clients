@@ -64,7 +64,7 @@ export default function Header({ onSearch, onPeriod, bellCredit, bellClients, be
             const creditVenc = bellCredit
                 .filter((c) => c.data_final)
                 .map((c) => {
-                    const [ano, mes, dia] = c.data_final.split('-').map(Number)
+                    const [ano, mes, dia] = String(c.data_final).split('-').map(Number)
                     const dataVenc = new Date(ano, mes - 1, dia)
                     const finalDias = Math.ceil((dataVenc.getTime() - hoje.getTime()) / (1000 * 60 * 60 * 24))
                     return {
@@ -85,7 +85,7 @@ export default function Header({ onSearch, onPeriod, bellCredit, bellClients, be
             const clientsVenc = bellClients
                 .filter((c) => c.data_final)
                 .map((c) => {
-                    const [ano, mes, dia] = c.data_final.split('-').map(Number)
+                    const [ano, mes, dia] = String(c.data_final).split('-').map(Number)
                     const dataVenc = new Date(ano, mes - 1, dia)
                     const finalDias = Math.ceil((dataVenc.getTime() - hoje.getTime()) / (1000 * 60 * 60 * 24))
                     return {
