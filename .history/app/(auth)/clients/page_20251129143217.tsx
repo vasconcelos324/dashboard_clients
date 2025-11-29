@@ -1,8 +1,6 @@
-/* "use client" */
+"use client" 
 
 import Header from "@/components/header"
-
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -82,7 +80,8 @@ export default function ClientsPage() {
     const cardCashFlow = useMemo(() => {
         const entrada = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_entrada || 0), 0)
         const saida = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_saida || 0), 0)
-        const saldo = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_saldo || 0), 0)
+        const saldo = entrada -saida
+
         return { entrada, saida, saldo }
     }, [filteredCashFlow])
 

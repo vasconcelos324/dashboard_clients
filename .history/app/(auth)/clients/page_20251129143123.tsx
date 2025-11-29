@@ -1,13 +1,10 @@
-/* "use client" */
+"use client" 
 
 import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-
-
-
 import { fetchDataServer } from "@/server"
 import { calculateDateEnd, calculateDateEndLong, CashFlowData, ClienteData, CreditData, formatCurrency, formatPhone, isDateInPeriod } from "@/utils"
 import { Check, Loader2, PackageOpen, Pencil, Trash2, Users, X } from "lucide-react"
@@ -83,7 +80,9 @@ export default function ClientsPage() {
     const cardCashFlow = useMemo(() => {
         const entrada = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_entrada || 0), 0)
         const saida = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_saida || 0), 0)
-        const saldo = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_saldo || 0), 0)
+        const saldo = 
+
+        /* const saldo = filteredCashFlow.reduce((acc, item) => acc + Number(item.valor_saldo || 0), 0) */
         return { entrada, saida, saldo }
     }, [filteredCashFlow])
 
@@ -197,7 +196,7 @@ export default function ClientsPage() {
         }
     };
 
-    
+
 
     const creditsClick = (item: CreditData) => {
         setEditingCredits({ ...item })
