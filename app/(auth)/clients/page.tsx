@@ -13,9 +13,6 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 
 
 
-
-
-
 export default function ClientsPage() {
 
     const [cashFlow, setCashFlow] = useState<CashFlowData[]>([])
