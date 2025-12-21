@@ -1,4 +1,4 @@
- "use client" 
+"use client"
 
 import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
@@ -237,19 +237,6 @@ export default function DashboardInvestment() {
                                     </div>
                                 </div>
 
-                                <div className="px-8 space-y-6">
-                                    <h3 className="text-xl font-bold text-center bg-linear-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
-                                        RESGATE
-                                    </h3>
-
-                                    <div className="space-y-4 pt-4">
-                                        <div className="flex justify-center pt-4 border-t border-amber-500/30">
-                                            <span className="text-3xl font-bold bg-linear-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
-                                                {formatCurrency(cardInvetiment.saldo)}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div className="px-8 space-y-6">
                                     <h3 className="text-xl font-bold text-center bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
@@ -259,6 +246,20 @@ export default function DashboardInvestment() {
                                         <div className="flex justify-center  pt-4 border-t border-emerald-500/30">
                                             <span className="text-3xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                                                 {formatCurrency(cardInvetiment.juros)}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="px-8 space-y-6">
+                                    <h3 className="text-xl font-bold text-center bg-linear-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                                        RESGATE
+                                    </h3>
+
+                                    <div className="space-y-4 pt-4">
+                                        <div className="flex justify-center pt-4 border-t border-amber-500/30">
+                                            <span className="text-3xl font-bold bg-linear-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                                                {formatCurrency(cardInvetiment.saldo)}
                                             </span>
                                         </div>
                                     </div>
