@@ -317,14 +317,11 @@ export default function ClientsPage() {
             </div>
         )
     }
-
-
     return (
         <div className="h-screen overflow-hidden bg-linear-to-br  flex flex-col space-y-1 ">
             <Header onSearch={setSearchTerm} onPeriod={setSelectedPeriod} bellClients={clients} bellCredit={credits} />
             <main className="p-2 min-h-screen bg-white   backdrop-blur-xl ">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 ">
-
                     <div className="lg:col-span-4">
                         <Card className=" border-0 shadow-2xl bg-linear-to-br from-slate-900 via-slate-950 
                         to-slate-900 backdrop-blur-2xl overflow-hidden relative group hover:shadow-cyan-500/40 
@@ -531,105 +528,90 @@ export default function ClientsPage() {
                             </CardContent>
                         </Card>
                     </div>
-
                     <div className="lg:col-span-5 space-y-2">
-                        <Card className="max-w-6xl mx-auto overflow-hidden border-slate-700/50 bg-linear-to-br from-slate-900/95 via-slate-950/98 to-slate-900/95 backdrop-blur-2xl shadow-2xl">
-                            <div className="absolute inset-0 bg-linear-to-t from-cyan-900/20 via-transparent to-transparent" />
-                            <div className="absolute inset-0  opacity-5" />
-                            <CardContent className="p-8">
-                                <div className="grid grid-cols-3 divide-x divide-slate-700/80">
-
-                                    <div className="px-8 space-y-6">
-                                        <h3 className="text-xl font-bold text-center bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        <Card className="relative max-w-6xl mx-auto overflow-hidden border border-slate-700/50 bg-linear-to-br from-slate-900/95 via-slate-950/95 to-slate-900/95 backdrop-blur-2xl shadow-2xl rounded-3xl">
+                            <div className="absolute inset-0 bg-linear-to-t from-cyan-900/10 via-transparent to-transparent" />
+                            <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_top_right,#06b6d4,transparent_35%)]" />
+                            <CardContent className="relative z-10 p-8">
+                                <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-700/60">
+                                    <div className="px-6 py-4 flex flex-col gap-6">
+                                        <h3 className="text-xl font-bold text-center tracking-wide bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                                             FLUXO DE CAIXA
                                         </h3>
-
-                                        <div className="space-y-4 pt-4">
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Entrada</span>
-                                                <span className="text-2xl font-bold text-slate-100">
+                                        <div className="flex flex-col gap-0">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Entrada</span>
+                                                <span className="text-base font-bold text-slate-100 tabular-nums">
                                                     {formatCurrency(cardCashFlow.entrada)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Saída</span>
-                                                <span className="text-2xl font-bold text-red-400">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Saída</span>
+                                                <span className="text-base font-bold text-red-400 tabular-nums">
                                                     {formatCurrency(cardCashFlow.saida)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between pt-4 border-t border-cyan-500/30">
-                                                <span className="text-slate-300 font-semibold">Saldo</span>
-                                                <span className="text-3xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                                            <div className="flex items-baseline justify-between gap-3 pt-4 mt-1 border-t border-cyan-500/30">
+                                                <span className="text-slate-300 font-semibold shrink-0">Saldo</span>
+                                                <span className="text-lg font-extrabold tabular-nums bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                                                     {formatCurrency(cardCashFlow.saldo)}
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="px-8 space-y-6">
-                                        <h3 className="text-xl font-bold text-center bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+                                    <div className="px-6 py-4 flex flex-col gap-6">
+                                        <h3 className="text-xl font-bold text-center tracking-wide bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                                             CLIENTES
                                         </h3>
-
-                                        <div className="space-y-4 pt-4">
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Receita</span>
-                                                <span className="text-2xl font-bold text-slate-100">
+                                        <div className="flex flex-col gap-0">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Receita</span>
+                                                <span className="text-base font-bold text-slate-100 tabular-nums">
                                                     {formatCurrency(cardClients.receita)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Juros</span>
-                                                <span className="text-2xl font-bold text-amber-400">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Juros</span>
+                                                <span className="text-base font-bold text-amber-400 tabular-nums">
                                                     {formatCurrency(cardClients.juros)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between pt-4 border-t border-emerald-500/30">
-                                                <span className="text-slate-300 font-semibold">Saldo</span>
-                                                <span className="text-3xl font-bold bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+                                            <div className="flex items-baseline justify-between gap-3 pt-4 mt-1 border-t border-emerald-500/30">
+                                                <span className="text-slate-300 font-semibold shrink-0">Saldo</span>
+                                                <span className="text-lg font-extrabold tabular-nums bg-linear-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                                                     {formatCurrency(cardClients.saldo)}
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="px-8 space-y-6">
-                                        <h3 className="text-xl font-bold text-center bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                                            CLIENTES LONGO PRAZO
+                                    <div className="px-6 py-4 flex flex-col gap-6">
+                                        <h3 className="text-xl font-bold text-center leading-tight tracking-wide bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                                            CLIENTES LONGO 
                                         </h3>
-
-                                        <div className="space-y-4 pt-4">
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Receita</span>
-                                                <span className="text-2xl font-bold text-slate-100">
+                                        <div className="flex flex-col gap-0">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Receita</span>
+                                                <span className="text-base font-bold text-slate-100 tabular-nums">
                                                     {formatCurrency(cardCredits.receita)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between">
-                                                <span className="text-slate-400 text-sm">Juros</span>
-                                                <span className="text-2xl font-bold text-amber-400">
+                                            <div className="flex items-baseline justify-between gap-3 py-3 border-b border-slate-700/40">
+                                                <span className="text-slate-400 text-sm font-medium shrink-0">Juros</span>
+                                                <span className="text-base font-bold text-amber-400 tabular-nums">
                                                     {formatCurrency(cardCredits.juros)}
                                                 </span>
                                             </div>
-
-                                            <div className="flex justify-between pt-4 border-t border-purple-500/30">
-                                                <span className="text-slate-300 font-semibold">Saldo</span>
-                                                <span className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                                            <div className="flex items-baseline justify-between gap-3 pt-4 mt-1 border-t border-purple-500/30">
+                                                <span className="text-slate-300 font-semibold shrink-0">Saldo</span>
+                                                <span className="text-lg font-extrabold tabular-nums bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                                                     {formatCurrency(cardCredits.restante)}
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </CardContent>
                         </Card>
-
                         <Card className="h-[530px] border-0 shadow-2xl bg-linear-to-br from-slate-900 via-slate-950 to-slate-900 
                   backdrop-blur-2xl overflow-hidden relative group 
                   hover:shadow-cyan-500/40 transition-all duration-500 
