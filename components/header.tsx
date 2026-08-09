@@ -388,7 +388,7 @@ export default function Header({ onSearch, onPeriod, bellCredit, bellClients, be
                         <DropdownMenuTrigger asChild>
                             <Button variant="ghost" className="relative h-10 w-10 rounded-full p-0 overflow-hidden ring-2 ring-white/20 hover:ring-white/40 transition-all">
                                 <Avatar className="h-full w-full">
-                                    <AvatarImage src="/usuario.jpg" alt="Usuário" className="object-cover" />
+                                    <AvatarImage src="" alt="Usuário" className="object-cover" />
                                     <AvatarFallback className="bg-linear-to-br from-blue-600 to-blue-800 text-white">
                                         <User className="h-5 w-5" />
                                     </AvatarFallback>
